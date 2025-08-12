@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% load static %}
+<html>
+<head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      </script>
+
+
+<link rel="stylesheet" href="{% static 'css/viewuser.css' %}">
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+ background: linear-gradient(to bottom right, #ff6666 0%, #ff3399 100%);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+    background: linear-gradient(to bottom, #cc3399 0%, #66ffcc 100%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+   background: linear-gradient(to bottom, #cc3399 0%, #ff6666 100%);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ /* Modify the background color */
+
+        .navbar-custom {
+              background: linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%);
+        }
+        /* Modify brand and text color */
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text,.a1 {
+            color:linear-gradient(to bottom, #003300 0%, #66ff99 100%);
+            background: linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%);
+            text-align: center;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav" style="background-color:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%); ">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <!-- Navigation links in sidebar-->
+ </br>
+
+				</br>
+  <a href="{% url 'adminhome' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Home</a><br />
+<br/>
+				<a href="{% url 'addproductfunction' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Add Product</a><br />
+				<br />
+				<a href="{% url 'viewproducts' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">View Product</a><br />
+				<br />
+
+				<a href="{% url 'viewcustomers' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">View Customers</a><br />
+				<br />
+  <a href="{% url 'logout' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Logout</a><br />
+				<br />
+</div>
+
+<div id="main">
+
+  <nav class="navbar navbar-custom">
+        <a1 class="navbar-brand" text-align="center">
+          <h1>RentAny Admin Interface</h1>
+      </a1>
+    </nav>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<center>
+<mark>Total Number of Customer Records = {{count}}</mark>
+</center>
+   <div class="table-wrapper">
+
+<table class="fl-table" align=center width="800" bgcolor="red">
+<tr align=center bgcolor="pink" border=2>
+<tr>
+    <th>Id</th>
+<th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+
+</tr>
+
+
+{% for file in files %}
+
+<tr>
+    <td>{{file.id}}</td>
+<td>{{file.name}}</td>
+    <td>{{file.email}}</td>
+<td>{{file.password}}</td>
+
+</tr>
+
+
+{% empty %}
+<h3 align=center><u>No Records Found</u></h3>
+
+
+{% endfor %}
+
+
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+    </body>
+</html>

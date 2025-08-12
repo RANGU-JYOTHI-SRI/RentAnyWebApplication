@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+ {% load static %}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+@charset "ISO-8859-1";
+/*---------------------------------------*/
+/* Font */
+/*---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+/*---------------------------------------*/
+/* Register Form */
+/*---------------------------------------*/
+body {
+  background:linear-gradient(to right, #78a7ba 0%, #385D6C 50%, #78a7ba 99%);
+}
+
+.signup-form {
+  font-family: "Roboto", sans-serif;
+  width:650px;
+  margin:30px auto;
+  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  border-radius: 10px;
+}
+
+/*---------------------------------------*/
+/* Form Header */
+/*---------------------------------------*/
+.form-header  {
+  background-color: hotpink;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:#666;
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:#666;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#1BBA93;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+
+
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
+
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
+
+input[type="file"] {
+  outline: none;
+  cursor:pointer;
+  font-size: 17px;
+}
+
+#range-label {
+  width:15%;
+  padding:5px;
+  background-color: #1BBA93;
+  color:white;
+  border-radius: 5px;
+  font-size: 17px;
+  position: relative;
+  top:-8px;
+}
+
+
+::-webkit-input-placeholder  {
+  color:#d9d9d9;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.signup-form .form-footer  {
+  background-color: hotpink;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: right;
+  border-top: hotpink;
+  clear:both;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:#999;
+  font-style: italic;
+  font-weight: thin;
+}
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: #1BBA93;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#bcf5e7;
+   cursor:pointer;
+}
+
+.btn:hover {
+  background-color: #169c7b;
+  color:white;
+}
+
+
+
+body {
+  font-family: "Lato", sans-serif;
+ background: linear-gradient(to bottom right, #ff6666 0%, #ff3399 100%);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+    background: linear-gradient(to bottom, #cc3399 0%, #66ffcc 100%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+   background: linear-gradient(to bottom, #cc3399 0%, #ff6666 100%);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ /* Modify the background color */
+
+        .navbar-custom {
+              background: linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%);
+
+              text-align: center;
+        }
+        /* Modify brand and text color */
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text,.a1 {
+            color:linear-gradient(to bottom, #003300 0%, #66ff99 100%);
+            background: linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%);
+            text-align: center;
+            margin-left: -10px;
+            margin-top: -10px;
+
+            overflow: hidden;
+             width: 100%;
+        }
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(to bottom, #3399ff 0%, #ff66ff 100%);;
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: ppx 4px 8px 4px rgba(0,0,0,0.2),5px 6px 20px 5px rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="background-color:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%); ">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <!-- Navigation links in sidebar-->
+				 </br>
+  <a href="{% url 'adminhome' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Home</a><br />
+<br/>
+				<a href="{% url 'addproductfunction' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Add Product</a><br />
+				<br />
+				<a href="{% url 'viewproducts' %}" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">View Product</a><br />
+				<br />
+
+				<a href="/viewcustomers" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">View Customers</a><br />
+				<br />
+  <a href="/logout" style="background:linear-gradient(to bottom, #ff9966 0%, #ff99cc 100%)">Logout</a><br />
+				<br />
+</div>
+</div>
+
+<div id="main">
+
+  <nav class="navbar navbar-custom">
+        <a1 class="navbar-brand" text-align="center">
+          <h1>RentAny Admin Interface</h1>
+      </a1>
+    </nav>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<form class="signup-form" ENCTYPE="multipart/form-data" action="{% url 'addproduct' %}" method="post" >
+    {% csrf_token %}
+
+      <!-- form header -->
+      <div class="form-header" style="background:hotpink">
+        <h1>Add an Item</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Add item</button>
+      </div>
+
+    </form>
+
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</body>
+</html>
